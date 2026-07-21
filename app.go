@@ -33,6 +33,10 @@ func binaryToText(binary string) (string, error) {
 	var builder strings.Builder
 
 	for _, segment := range segments {
+		if len(segment) != 8 {
+			return "", fmt.Errorf("binary segment of non-8 characters '%s' provided", segment)
+		}
+
 		asDecimal, err := strconv.ParseInt(segment, 2, 64)
 
 		if err != nil {
