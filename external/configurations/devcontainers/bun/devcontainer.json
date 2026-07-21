@@ -1,0 +1,9 @@
+{
+    "name": "Bun Devcontainer",
+    "image": "cyrus01337/bun-devcontainer",
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": ".devcontainer/setup.sh",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    }
+}
